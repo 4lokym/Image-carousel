@@ -19,6 +19,7 @@ nav{
 }
 
 .carousel-frame{
+    z-index: -1;
     width: 100%;
     height: var(--carousel-height);
     overflow: hidden;

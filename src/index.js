@@ -29,3 +29,29 @@ document
       undefined,
     ),
   );
+
+
+const transitioning = function objectThatManagesTheTransitioning(){
+  let count = 1;
+  const images = [...document.querySelectorAll(".img")]
+  const num = images.length;
+
+  function print(){
+    console.log(images);
+  }
+
+  const change = function(){
+    console.log("transition");
+    if(count >= num){
+      count = 0;
+    }
+    images.map((x) =>{
+      x.style.transform = `translateX(${-count *100}%)`;
+    })
+    count++;
+  }
+
+  return {change, print}
+}();
+
+setInterval(transitioning.change, 10000);

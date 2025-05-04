@@ -4,10 +4,67 @@
     box-sizing: border-box;
 }
 
+:root{
+    --carousel-height: 40rem;
+}
+
 nav{
     display: flex;
     justify-content: center;
     width: 100%;
     height: 4rem;
-    background-color: aqua;
+    background-color: rebeccapurple;
+    color: white;
+    z-index: 2;
+}
+
+.carousel-frame{
+    width: 100%;
+    height: var(--carousel-height);
+    overflow: hidden;
+}
+
+.carousel{
+    width: fit-content;
+    display: flex;
+    height: 100%;
+}
+
+
+.img-mountain{
+    background-image: url("./asset/pexels-rpnickson-2559941.jpg");
+    background-position: center;
+}
+.img-nightCity{
+    background-image: url("./asset/pexels-iriser-1366957.jpg");
+    background-position: 0px 70%;
+}
+.img-ballon{
+    background-image: url("./asset/pexels-bess-hamiti-83687-36487.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.img-tree{
+    background-image: url("./asset/pexels-pixabay-35857.jpg");
+    background-position: 0px 70%;
+}
+.img-mountain2{
+    background-image: url("./asset/pexels-stywo-1054218.jpg");
+    background-position: 0px 70%;
+}
+
+/* .carousel:hover{
+    .img{
+        transform: translateX(-100%);
+    }
+} */
+
+.img{
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: -1;
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
 }

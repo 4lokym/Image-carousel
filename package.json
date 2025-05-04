@@ -15,5 +15,8 @@
     "predeploy": "git checkout gh-pages && git merge main --no-edit && npm run build",
     "deploy": "git add dist -f && git commit -m 'Deployment commit'",
     "postdeploy": "git subtree push --prefix dist origin gh-pages && git checkout main"
+  },
+  "dependencies": {
+    "4lokym-dropdownmenu": "^1.0.0"
   }
 }
